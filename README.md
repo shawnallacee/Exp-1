@@ -76,36 +76,7 @@ df_results = pd.DataFrame({
 print(df_results)        
 
 ## Output                                
---- 1. Matrix and Vector Definition ---    
-Matrix A:    
-[[4. 2.]    
- [1. 3.]]    
-    
-Vector b:    
-[8. 5.]                                
-
---- 2. Matrix Transpose (A^T) ---    
-[[4. 1.]    
- [2. 3.]]                            
-
---- 3. Matrix Inverse (A^-1) ---        
-[[ 0.3 -0.2]    
- [-0.1  0.4]]    
-            
---- 4. Solving Linear Equation (A * x = b) ---    
-Solution vector x: [1.4 1.2]    
-                                                    
---- 5. Eigen Decomposition (A v = lambda v) ---        
-Eigenvalues: [5. 2.]    
-
-Eigenvectors:                
- [[ 0.89442719 -0.70710678]        
- [ 0.4472136   0.70710678]]    
-
---- 6. Pandas Dataframe Summary ---    
-   Eigenvalue  Eigenvector_Col1  Eigenvector_Col2    
-0         5.0          0.894427         -0.707107        
-1         2.0          0.447214          0.707107    
+<img width="458" height="650" alt="image" src="https://github.com/user-attachments/assets/4d8d9414-d0b1-4414-a7af-52f815f84916" />
 
 
 ## Result
