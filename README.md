@@ -28,10 +28,86 @@ manipulation and analysis in Python.
     `v` is an eigenvector.
 
 ## Coding
+import numpy as np
+import pandas as pd
 
+\# Define a 2D square matrix A and a vector b
+print("--- 1. Matrix and Vector Definition ---")
+A = np.array([[4, 2], 
+              [1, 3]], dtype=float)
+b = np.array([8, 5], dtype=float)
+
+print("Matrix A:")
+print(A)
+print("\nVector b:")
+print(b)
+
+\# Compute the transpose of matrix A
+print("\n--- 2. Matrix Transpose (A^T) ---")
+A_transpose = A.T
+print(A_transpose)
+
+\# Calculate the inverse of matrix A
+print("\n--- 3. Matrix Inverse (A^-1) ---")
+try:
+    A_inv = np.linalg.inv(A)
+    print(A_inv)
+except np.LinAlgError:
+    print("Matrix A is singular and cannot be inverted.")
+
+\# Solve the linear equation A * x = b
+print("\n--- 4. Solving Linear Equation (A * x = b) ---")
+x = np.linalg.solve(A, b)
+print("Solution vector x:", x)
+
+\# Perform eigen decomposition
+print("\n--- 5. Eigen Decomposition (A v = lambda v) ---")
+eigenvalues, eigenvectors = np.linalg.eig(A)
+print("Eigenvalues:", eigenvalues)
+print("\nEigenvectors:\n", eigenvectors)
+
+\# Bonus / Pandas Integration: Tabular Representation
+print("\n--- 6. Pandas Dataframe Summary ---")
+df_results = pd.DataFrame({
+    "Eigenvalue": eigenvalues,
+    "Eigenvector_Col1": eigenvectors[:, 0],
+    "Eigenvector_Col2": eigenvectors[:, 1]
+})
+print(df_results)
 
 ## Output
+--- 1. Matrix and Vector Definition ---
+Matrix A:
+[[4. 2.]
+ [1. 3.]]
+
+Vector b:
+[8. 5.]
+
+--- 2. Matrix Transpose (A^T) ---
+[[4. 1.]
+ [2. 3.]]
+
+--- 3. Matrix Inverse (A^-1) ---
+[[ 0.3 -0.2]
+ [-0.1  0.4]]
+
+--- 4. Solving Linear Equation (A * x = b) ---
+Solution vector x: [1.4 1.2]
+
+--- 5. Eigen Decomposition (A v = lambda v) ---
+Eigenvalues: [5. 2.]
+
+Eigenvectors:
+ [[ 0.89442719 -0.70710678]
+ [ 0.4472136   0.70710678]]
+
+--- 6. Pandas Dataframe Summary ---
+   Eigenvalue  Eigenvector_Col1  Eigenvector_Col2
+0         5.0          0.894427         -0.707107
+1         2.0          0.447214          0.707107
 
 
 ## Result
-
+Thus to understand the use of NumPy and Pandas for performing basic data
+manipulation and analysis in Python successfully.
